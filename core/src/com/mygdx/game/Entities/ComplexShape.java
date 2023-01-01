@@ -4,7 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.utils.DelayedRemovalArray;
-import com.mygdx.game.Data;
+import com.mygdx.game.Data.Data;
 import com.mygdx.game.Management.Estates;
 import com.badlogic.gdx.math.Rectangle;
 

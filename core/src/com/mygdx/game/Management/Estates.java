@@ -2,7 +2,7 @@ package com.mygdx.game.Management;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.DelayedRemovalArray;
-import com.mygdx.game.Data;
+import com.mygdx.game.Data.Data;
 import com.mygdx.game.Entities.ComplexShape;
 import com.mygdx.game.Entities.Shape;
 import com.mygdx.game.Entities.SimpleShape;
