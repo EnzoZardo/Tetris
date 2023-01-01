@@ -21,7 +21,7 @@ public class ComplexShape extends Shape {
         super(x, y, width, height, r, g, b);
         this.nextIndex = new Random().nextInt(Data.ALLSHAPES.size());
         this.actualIndex = new Random().nextInt(Data.ALLSHAPES.size());
-        this.myShape = Data.ALLSHAPES.get(actualIndex);
+        this.myShape = Data.ALLSHAPES.get(actualIndex).clone();
         this.color = Data.ALLCOLORS[actualIndex];
         this.r = color[0];
         this.g = color[1];
@@ -41,6 +41,9 @@ public class ComplexShape extends Shape {
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
             moveAll(XSPEED, 0);
+        }
+        if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            moveAll(0, moveDown);
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
             nextShape();
@@ -73,7 +76,7 @@ public class ComplexShape extends Shape {
     public void setRandomShape() {
         actualIndex = nextIndex;
         nextIndex = new Random().nextInt(Data.ALLSHAPES.size());
-        myShape = Data.ALLSHAPES.get(actualIndex);
+        myShape = Data.ALLSHAPES.get(actualIndex).clone();
         color = Data.ALLCOLORS[actualIndex];
         r = color[0];
         g = color[1];
